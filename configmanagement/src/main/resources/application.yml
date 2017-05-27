@@ -1,0 +1,23 @@
+server:
+  port: 0
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    instanceId: ${spring.application.name}:${server.port}
+  client:
+    registryFetchIntervalSeconds: 5
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/elbodoom/config.git
+  application:
+      name: configserver
+
+management:
+  security:
+    enabled:
+      false

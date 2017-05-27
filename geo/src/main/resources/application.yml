@@ -1,0 +1,14 @@
+server:
+  port: 9999
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    instanceId: ${spring.application.name}:${server.port}
+  client:
+    registryFetchIntervalSeconds: 5
+
+management:
+  security:
+    enabled:
+      false
