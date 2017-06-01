@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api.iml" filepath="$PROJECT_DIR$/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configmanagement/configmanagement.iml" filepath="$PROJECT_DIR$/configmanagement/configmanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodtruck/foodtruck.iml" filepath="$PROJECT_DIR$/foodtruck/foodtruck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/foodtruckmap/foodtruckmap.iml" filepath="$PROJECT_DIR$/foodtruckmap/foodtruckmap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geo/geo.iml" filepath="$PROJECT_DIR$/geo/geo.iml" />
+    </modules>
+  </component>
+</project>

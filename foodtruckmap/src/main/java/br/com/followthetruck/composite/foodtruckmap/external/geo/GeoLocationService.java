@@ -17,5 +17,5 @@ public interface GeoLocationService {
             method = RequestMethod.GET,
             produces = "application/json"
     )
-    Distance calculateDistance(@RequestParam(name = "origin")Position a, @RequestParam(name = "destination")Position b);
+    Distance calculateDistance(@RequestParam(name = "origin")String a, @RequestParam(name = "destination")String b);
 }

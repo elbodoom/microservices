@@ -36,11 +36,11 @@ public class GeoLocationProxy {
     private GeoLocationService geoLocationService;
 
     @HystrixCommand(fallbackMethod = "calculateDistanceByHeuristic")
-    public Distance calculateDistance(Position a, Position b) {
+    public Distance calculateDistance(String a, String b) {
         return geoLocationService.calculateDistance(a, b);
     }
 
-    public Distance calculateDistanceByHeuristic(Position a, Position b) {
+    public Distance calculateDistanceByHeuristic(String a, String b) {
         return new Distance(distance, time);
     }
 }

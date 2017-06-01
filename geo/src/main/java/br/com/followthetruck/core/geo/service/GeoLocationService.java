@@ -19,7 +19,7 @@ public class GeoLocationService {
             method = RequestMethod.GET,
             produces = "application/json"
     )
-    public ResponseEntity<Distance> calculateDistance(@RequestParam(name = "origin")Position a, @RequestParam(name = "destination")Position b) {
+    public ResponseEntity<Distance> calculateDistance(@RequestParam(name = "origin")String a, @RequestParam(name = "destination")String b) {
         return ResponseEntity.ok(new Distance(150L, "3 hrs and 15 minutes"));
     }
 }

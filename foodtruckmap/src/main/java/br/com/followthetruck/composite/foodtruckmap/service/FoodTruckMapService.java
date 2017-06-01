@@ -5,7 +5,6 @@ import br.com.followthetruck.composite.foodtruckmap.external.geo.GeoLocationProx
 import br.com.followthetruck.composite.foodtruckmap.model.MappedFoodTruck;
 import br.com.followthetruck.core.model.Distance;
 import br.com.followthetruck.core.model.FoodTruck;
-import br.com.followthetruck.core.model.Position;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,14 +30,17 @@ public class FoodTruckMapService {
             method = RequestMethod.GET,
             produces = "application/json"
     )
-    public ResponseEntity<List<MappedFoodTruck>> map(Position myPosition) {
+    public ResponseEntity<List<MappedFoodTruck>> map() {
         List<FoodTruck> foodTrucks = foodTruckService.findFoodTrucks();
 
         List<MappedFoodTruck> mappedFoodTrucks = new ArrayList<>();
 
         for (FoodTruck foodTruck : foodTrucks) {
             Distance distance = geoLocationService.
-                    calculateDistance(myPosition, Position.from(foodTruck.getLocation()));
+                    calculateDistance(
+                            "-23.000,-46.0000",
+                            foodTruck.getLocation());
+
             mappedFoodTrucks.add(new MappedFoodTruck(distance, foodTruck));
         }
 

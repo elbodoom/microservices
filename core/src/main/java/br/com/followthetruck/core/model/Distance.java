@@ -18,6 +18,9 @@ public class Distance {
     @JsonProperty("time")
     private String time;
 
+    public Distance() {
+    }
+
     public Distance(Long distance, String time) {
         this.distance = distance;
         this.time = time;
