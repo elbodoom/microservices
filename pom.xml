@@ -26,6 +26,7 @@
 		<module>foodtruckmap</module>
         <module>core</module>
         <module>configmanagement</module>
+		<module>edge-server</module>
     </modules>
 
 	<parent>
